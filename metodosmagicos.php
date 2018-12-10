@@ -3,20 +3,20 @@
 
 class ejemplo
 {
-
 	function __set($var1,$var2)
 	{
-		echo "Soy un '$var1' que no existe y tengo la cadena de texto '$var2'";
+		echo $var2. " y el " . $var1;
 	}
 }
 $objeto1 = new ejemplo();
-$objeto1->metodo = "hELLO COLIMENSE!!!";
+$objeto1->metodo = "El SET se declara igualando fuera de la clase, con 2 variables en el metodo mágico";
 // TARDE 13MIN, practicarlo 1,2,3,4,5 para hacerlo 3 veces mas rápido
 
-
-
-
-
+/*
+Flexboxfroggy 
+Ejercicios curso flexbox
+checar curso Codigo facilito, 1(display), 2(poner imagen de fondo),3(positions), 4(header), 5(transition y animation) 
+*/
 
 
 

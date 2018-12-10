@@ -1,19 +1,49 @@
 <?php 
 
-
-class ejemplo
+class operacionesMatematicas 
 {
 	public function metodo($cadena)
 	{
 		do{
 			echo $cadena . "<br>";
 			$cadena++;
-		}while ($cadena <= 10);
+		}while ($cadena <= 5);
+
 	}
 }
 $cadena = 1;
-$objeto = new ejemplo();
+$objeto =new operacionesMatematicas();
 $objeto->metodo($cadena);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*EJERCICIO CON DO-WHILE
@@ -561,18 +591,19 @@ $objeto->razonar();
 
 /*
 TAREAS
-1)hacer un objeto que herede algo 
-2)Hacer un objeto que herede un metodo privado 
-3)Hacer un objeto que herede otra clase ya heredada (una tercer clase) 
-4)Hcaer un objeto que herede un metodo protegido 
-5)Hacer un objeto que utilice parent:: 
-6)Utilizar una clase usando STATIC 
-7)hacer una clase que sume, reste, multiplique y divida  
-8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo 
-9)Hacer suma,resta,multiplicación y división usando IF-ELSE 
-10)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK 
-11)use el IF CORTO, que compare país y muestre su divisa  
-12) use el IF CORTO, que compare mayoría de edad 
+1)hacer un objeto que herede algo LISTO
+2)Hacer un objeto que herede un metodo privado LISTO
+3)Hacer un objeto que herede otra clase ya heredada (una tercer clase) LISTO
+4)Hcaer un objeto que herede un metodo protegido LISTO
+5)Hacer un objeto que utilice parent:: LISTO
+6)Utilizar una clase usando STATIC LISTO
+
+7)hacer una clase que sume, reste, multiplique y divida LISTA
+8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo LISTO
+9)Hacer suma,resta,multiplicación y división usando IF-ELSE LISTO
+10)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK LISTO
+11)use el IF CORTO, que compare país y muestre su divisa  LISTO
+12) use el IF CORTO, que compare mayoría de edad LISTO
 
 TARDE 40MIN , new record 32min
 
@@ -583,7 +614,7 @@ PARTE 2
 15)FOREACH con un ARREGLO ASOCIATIVO y que sume LISTO
 16)Hacer un ciclo con foreach con nombres LISTO
 
-17)Sumar, restar, multiplicar y dividir un array con FOR y IF/ELSE  LISTO
+17)Sumar, restar, multiplicar y dividir un array con FOR y IF/ELSE LISTO
 18)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH  LISTO
 
 

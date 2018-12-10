@@ -1,0 +1,297 @@
+<!--
+Labores diarias:
+
+Flex-ranita
+flexbox ejercicio curso flexbox(flex-direction/justfify-content/align-items/align-content/align-self/order)
+1(display)
+2(positions)
+3(poner imagen de fondo)
+4(transition y animation)
+5(header) 
+Ejercicio responsive
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios flex-box</title>
+	<style>
+		section{
+			width: 300px;
+			height: 300px;
+			margin: auto;
+			border: 5px solid blue;
+			display: flex;
+			flex-direction: row;
+			justify-content:space-around;
+			align-items:flex-end;
+		}
+		.caja1{
+			width: 50px;
+			height: 50px;
+			background-color: green;
+		}
+		.caja2{
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			align-self:center;
+		}
+		.caja3{
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+			order:-1;
+		}
+		p.uno{
+			background-color: orange;
+		}
+		p.dos{
+			background-color: pink;
+			display: inline-block;
+		}
+		p.tres{
+			background-color: brown;
+			display: inline;
+		}
+		.padre{
+			width: 250px;
+			height: 250px;
+			background-color: orange;
+			margin:25px;
+		}
+		.hijo1{
+			width: 50px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+		}
+		.hijo2{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			
+			left: 20px;
+		}
+		
+		.fondo{
+			background-image: url("gato-gordo.jpg");
+			background-position: 100%;
+			background-size: 100% 100%;
+			height: 100vh;
+			
+		}
+		
+	img.gato{
+		width: 200px;
+		height: 200px;
+		position: fixed;
+		margin-top: -1100px;
+		margin-left: 75%;
+	}
+	@media screen and (max-width: 480px){
+		img{
+			margin-left: 25%;
+		}
+	}
+
+	@media screen and (min-width: 481px) and (max-width: 760px){
+		img{
+			margin-left: 50%;
+		}
+	}
+
+	@media screen and (min-width: 761px){
+		img{
+			margin-left: 25%;
+		}
+	}
+
+		/*	==========EFECTO TRANSITION, TRANSFORM Y ANIMATION CON CUBO=================*/
+
+		.cubo{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			transition: width 2s, height 2s, transform 4s;/*Para hacer mas notable animation, subele los segundos a transform dentro del transition*/
+			transition-timing-function: ease-in-out; 
+				/*linear: misma velocidad principio a fin
+			 ease: comienza lento, luego rápido y termina lento
+			ease-in: comienzo lento, termina rápido
+			ease-out: empieza rápido y termina lento
+		    ease-out: completamente lento	 
+			 */
+		}
+
+		.cubo:hover{
+			width: 300px;
+			height: 300px;
+			transform: rotate(180deg);
+			animation-name: ejemplo;/*Sin animation-name y animation duration, no sirve la animacion*/
+			animation-duration: 3s;
+			animation-delay: 0.5s;
+		}
+
+		@keyframes ejemplo{
+			/*MANERA 1 DE HACER ANIMACIÓN
+			from{background-color: red}
+			to{background-color: yellow}
+			*/
+			0%{background-color: red}
+			25%{background-color: blue}
+			50%{background-color: green}
+			75%{background-color: yellow}
+			100%{background-color: pink}
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<h1>FLEX-BOX</h1>
+	<section>
+		<div class="caja1"></div>
+		<div class="caja2"></div>
+		<div class="caja3"></div>
+	</section>
+	<hr>
+	<h2>Displays</h2>
+	<p class="uno">soy un display:block; que viene por defecto y ocupa todo el renglon</p>
+	<p class="uno">soy un display:block; que viene por defecto y ocupa todo el renglon</p>
+	<p class="uno">soy un display:block; que viene por defecto y ocupa todo el renglon</p>
+	<p class="uno">soy un display:block; que viene por defecto y ocupa todo el renglon</p>
+
+	<p class="dos">soy un display:inline-block; y si no quepo, bajo a la siguiente fila</p>
+	<p class="dos">soy un display:inline-block; y si no quepo, bajo a la siguiente fila</p>
+	<p class="dos">soy un display:inline-block; y si no quepo, bajo a la siguiente fila</p>
+	<p class="dos">soy un display:inline-block; y si no quepo, bajo a la siguiente fila</p>
+
+	<hr>
+	<h3>No se aplica el margen en display:inline;</h3>
+	<p class="tres">soy un display:inline; y solo utilizo una sola fila para todo</p>
+	<p class="tres">soy un display:inline; y solo utilizo una sola fila para todo</p>
+	<p class="tres">soy un display:inline; y solo utilizo una sola fila para todo</p>
+	<p class="tres">soy un display:inline; y solo utilizo una sola fila para todo</p>
+
+	<p>no olvides el DISPLAY:NONE</p>
+	<hr>
+	
+	<h2>Positions</h2>
+	<div class="padre">
+		<div class="hijo1">hijo absolute</div>
+		<div class="hijo2">hijo relative</div>
+	</div>
+
+	<h2>Imagen de fondon</h2>
+	<div class="fondo">
+		<img src="gato-siames.jpg" class="gato"alt="">
+	</div>
+	
+	
+	<h2>Transition y animation</h2>
+	<div class="cubo"></div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+ANIMATION
+1)primero se le pone el nombre al KEYFRAME y pones animation-name: nombre; en el hover para identificar la animación 
+2)segundo, ponerle la duración  con animation-duration: 3s; porque si no, no sirve
+3)ponerle caracteristicas al keyframe
+
+
+
+FLEXBOX
+    1-Siempre debe de haber una caja padre y al menos un hijo
+    Siempre empieza tu código con display: flex; (se hará en la clase o selector del padre)
+    
+    2-Lo segundo es elegir si lo quieres en fila(de manera horizontal) o columna(de manera vertical, aunque en realidad lo que sucede es que cambia su eje principal). (se hará en la clase o selector del padre)
+    
+    3-Lo tercero es usar flex-wrap: wrap; que sirve para que si los hijos se salen de la caja padre, se pasen para abajo sin salirse de la caja padre, esto es de lo mas usado de flex-box(se hará en la clase o selector del padre)
+    
+    4-Lo cuarto es acomodar las cajas hijas dentro de la caja padre con justify-content, mira la imagen https://ibb.co/gw0DKNT
+    
+    5-Lo quinto es alinear todos los hijos en el eje secundario conforme a lo ancho y alto de la caja padre, como se muestra en la imagen. https://ibb.co/Gp076yH
+    
+    6-Lo sexto es que puedes mover las cajas de manera individual con align-self, pero se escribe en la clase del hijo y se mueven en el eje secundario.
+
+
+	POSITIONS
+static: no se mueve para ningun lado, toma como referenncia el  relative mas próximo
+
+relative: "encima de los fixies" y toma como "referencia otro relative y static "
+
+fixed: esta debajo de los "relative" y "absolute", y toma como referencia el "relative" y "static" mas próximo.
+NOTA IMPORTANTE: si usas top o bottom con el fixed, tomara el top y bottom pero "DEL NAVEGADOR", debe estar dentro de una caja con un position relative o static
+
+absolute: se pone ENCIMA DE TODO esta toma como referencia "el relative y static mas próximo"
+NOTA IMPORTANTE: si usas top o bottom con el absolute, tomara el top y bottom pero "DEL NAVEGADOR"
+
+=== Cajas DENTRO de una caja padre RELATIVE===
+hijo relative: toma la esquina de la caja padre como referencia, si lo mueves en negativo se sale de la caja por "ENCIMA" de la caja padre
+
+hijo static: No se mueve para ningún lado
+
+IMPORTANTE: no se olvide poner position:relative al padre, para poder posicionar de mejor manera las cosas
+-->
