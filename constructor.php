@@ -2,9 +2,9 @@
 
 class ejemplo
 {
-	public function nombres($var)
+	public function nombre($a)
 	{
-		echo $var;
+		echo $a."<br>";
 	}
 	public function titulo1()
 	{
@@ -23,41 +23,31 @@ class ejemplo
 		echo "</p>";
 	}
 }
-
 $objeto1 = new ejemplo();
 $objeto2 = new ejemplo();
 $objeto3 = new ejemplo();
 $objeto4 = new ejemplo();
 $objeto5 = new ejemplo();
 
-
 $objeto1->titulo1();
-$objeto1->nombres("Mengano<br>");
+$objeto1->nombre("Juan");
 $objeto1->titulo2();
 
 $objeto1->parrafo1();
-$objeto2->nombres("Perengano<br>");
+$objeto2->nombre("Pedro");
 $objeto1->parrafo2();
 
 $objeto1->titulo1();
-$objeto3->nombres("Sutano<br>");
+$objeto3->nombre("Yahir");
 $objeto1->titulo2();
 
 $objeto1->parrafo1();
-$objeto4->nombres("Menganita<br>");
+$objeto4->nombre("Jiro");
 $objeto1->parrafo2();
 
 $objeto1->titulo1();
-$objeto5->nombres("Diblain Teleforo<br>");
+$objeto5->nombre("Jesus");
 $objeto1->titulo2();
-
-
-
-
-
-
-
-
 
 
 
@@ -214,10 +204,10 @@ $objeto->metodo();
 //1)Objeto con constructor y metele un valor con una variable LISTO
 //2)PROPIEDAD modificada desde afuera del objeto LISTO
 //3)Cambiando mi apodo cuando está protegido LISTO
-//4)Imprimiendo un objeto con 2 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra. LISTO 
+//4)Imprimiendo un objeto con 2 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra.  LISTO
 //5)Cambiar PROPIEDAD PRIVADA desde afuera con una variable dentro de los parentesis del metodo LISTO
-//6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto LISTO
-//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. LISTO      
+//6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto 
+//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa.       
 
 //TARDE 21MIN, esto es el máximo
 
