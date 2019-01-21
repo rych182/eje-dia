@@ -1,53 +1,20 @@
 <?php
 
-class ejemplo
+abstract class saludar
 {
-	public function nombre($a)
+	public function saludo()
 	{
-		echo $a."<br>";
-	}
-	public function titulo1()
-	{
-		echo "<h1>";
-	}
-	public function titulo2()
-	{
-		echo "</h1>";
-	}
-	public function parrafo1()
-	{
-		echo "<p>";
-	}
-	public function parrafo2()
-	{
-		echo "</p>";
+		echo "Hola en español";
 	}
 }
-$objeto1 = new ejemplo();
-$objeto2 = new ejemplo();
-$objeto3 = new ejemplo();
-$objeto4 = new ejemplo();
-$objeto5 = new ejemplo();
+ 
+class hello extends saludar
+ {
+ 	
+ }
 
-$objeto1->titulo1();
-$objeto1->nombre("Juan");
-$objeto1->titulo2();
-
-$objeto1->parrafo1();
-$objeto2->nombre("Pedro");
-$objeto1->parrafo2();
-
-$objeto1->titulo1();
-$objeto3->nombre("Yahir");
-$objeto1->titulo2();
-
-$objeto1->parrafo1();
-$objeto4->nombre("Jiro");
-$objeto1->parrafo2();
-
-$objeto1->titulo1();
-$objeto5->nombre("Jesus");
-$objeto1->titulo2();
+$objeto = new hello();
+$objeto->saludo();
 
 
 
@@ -69,6 +36,105 @@ $objeto1->titulo2();
 
 
 
+/*Ejercicio 10
+
+class Usuario
+{
+    public $nombre;
+    public $correo;
+
+    function __construct($nombre,$correo){
+        $this->nombre = $nombre;
+        $this->correo = $correo;
+    }
+
+    public function mostrarNombre(){
+        echo 'Su nombre es: '. $this->nombre . '<br>';
+        return $this;
+    }
+    public function mostrarCorreo()
+    {
+        echo 'Su correo es: ' .$this->correo . '<br>';
+        return $this;
+    }
+}
+
+$carlos = new Usuario('Carlos', 'carlos@gmail.com');
+$carlos->mostrarNombre()->mostrarCorreo();
+
+*/
+
+
+
+
+
+
+/*Ejercicio 9
+
+class Persona
+{
+    public $nombre;
+    public $edad;
+    public $pais;
+
+    function __construct($nombre, $edad, $pais)
+    {
+        $this->nombre = $nombre;
+        $this->edad = $edad;
+        $this->pais = $pais;
+    }
+    public function mostrarInformacion()
+    {
+        return$this->nombre . ' tiene '. $this->edad . 'años de edad y es de '. $this->pais;
+    }
+}
+
+class Estudiante extends Persona {
+    function __construct($nombre, $edad, $pais,$carrera)
+    {
+        parent::__construct($nombre, $edad, $pais);
+        $this->carrera = $carreta;
+    }
+} 
+
+class Trabajador extends Persona 
+{
+    function __construct($nombre, $edad, $pais,$trabajo)
+    {
+        parent::__construct($nombre, $edad, $pais);
+        $this->trabajo= $trabajo;
+    }
+}
+    
+$carlos = new Trabajador('ric',31,"Mex","Dev");
+echo $carlos->trabajo;
+*/
+
+
+
+
+
+
+
+
+/*	Ejercicio8
+
+class Persona 
+{
+    public $nombre;
+    public $edad;
+    public $pais;
+
+    public function __construct($nombre,$edad,$pais)
+    {
+        echo $this->nombre=$nombre;
+        echo $this->edad=$edad;
+        echo $this->pais=$pais;
+    }
+}
+$objeto = new Persona("ric",24,"mex");
+
+*/
 
 
 
@@ -206,8 +272,17 @@ $objeto->metodo();
 //3)Cambiando mi apodo cuando está protegido LISTO
 //4)Imprimiendo un objeto con 2 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra.  LISTO
 //5)Cambiar PROPIEDAD PRIVADA desde afuera con una variable dentro de los parentesis del metodo LISTO
-//6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto 
-//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa.       
+//6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto LISTO
+//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. LISTO 
+//8)Crear un Constructor que modifique 3 propiedades publicas, las imprima y los valores se los pases desde afuera LISTO
+//9)Crear 3 clases, la clase no.2y3 heredaran la no.1, enla clase no.1 habrá 3 propiedades publicas y un constructor que "modificara las propiedades",
+//y un metodo con return que regresará una cadena de texto con los datos, en la clase no.2y3 tendran constructores que dentro de ellos usaran PARENT
+//para "heredar el constructor", de la clase 1, pero la clase 2 y 3 le agregaran un cuarto valor, abajito de donde heredan con PARENT, usaran un $this para
+//ese cuarto valor LISTO
+//10)Hacer una clase con 2 propiedades públicas, 2 metodods públicos y un constructor, el constructor modificara los metodos con variables que les darás valores
+//y se los pondrás desde afuera y los metodos imprimiran,pero usarás METODOS CADENA COMO EN LOS FRAMEWORKS, usando "returno $this" LISTO
+//11) Usar una clase abstracta, para usarla, ahuevo tienes que heredar y a la primer clase le pones abstract y ya esta. LISTO
+
 
 //TARDE 21MIN, esto es el máximo
 

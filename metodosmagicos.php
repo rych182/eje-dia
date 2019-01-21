@@ -3,13 +3,14 @@
 
 class ejemplo
 {
-	function __set($var1,$var2)
+	public function __set($var1,$var2)
 	{
-		echo $var2. " y el " . $var1;
+		echo "yo soy " . $var1 . " y yo soy su valor " . $var2;
 	}
 }
-$objeto1 = new ejemplo();
-$objeto1->metodo = "El SET se declara igualando fuera de la clase, con 2 variables en el metodo mágico";
+$objeto = new ejemplo();
+$objeto->propiedad=3;
+
 // TARDE 13MIN, practicarlo 1,2,3,4,5 para hacerlo 3 veces mas rápido
 
 /*

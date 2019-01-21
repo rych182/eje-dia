@@ -25,26 +25,31 @@ Ejercicio responsive
 			margin: auto;
 			border: 5px solid blue;
 			display: flex;
-			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-end;
+/*			flex-direction: row;
 			justify-content:space-around;
 			align-items:flex-end;
+*/
 		}
 		.caja1{
 			width: 50px;
 			height: 50px;
 			background-color: green;
+			align-self:center;
+			position: absolute;
 		}
 		.caja2{
 			width: 50px;
 			height: 50px;
 			background-color: red;
-			align-self:center;
+			order:-1;
 		}
 		.caja3{
 			width: 50px;
 			height: 50px;
 			background-color: pink;
-			order:-1;
+			order:-2;
 		}
 		p.uno{
 			background-color: orange;
@@ -304,4 +309,9 @@ hijo relative: toma la esquina de la caja padre como referencia, si lo mueves en
 hijo static: No se mueve para ningún lado
 
 IMPORTANTE: no se olvide poner position:relative al padre, para poder posicionar de mejor manera las cosas
+
+
+Ejercicios
+1)Mover las cajas, elige una forma y trata de hacerla
+
 -->
