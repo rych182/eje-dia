@@ -1,1 +1,1 @@
-console.log("Probando code runner");
+console.log("Parece que funciona pero solo JS");

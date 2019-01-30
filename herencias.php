@@ -1,19 +1,25 @@
 <?php 
 
-class ejemplo
+class operacionesMatematicas
 {
-	public function metodo()
+	public function metodo($operacion,$cadena)
 	{
-		$cadena = 0;
 		do{
-			echo $cadena ."<br>";
+			echo $cadena . "<br>";
 			$cadena++;
-		}while ($cadena < 11);
+		}while ($cadena <= 10);
 	}
 }
+$cadena = 1;
+$objeto = new operacionesMatematicas();
+echo $objeto->metodo("division",$cadena);
 
-$objeto = new ejemplo();
-echo $objeto->metodo();
+
+
+
+
+
+
 
 
 
@@ -576,7 +582,7 @@ $objeto->razonar();
 /*
 TAREAS
 1)hacer un objeto que herede algo LISTO
-2)Hacer un objeto que herede un metodo privado   LISTO
+2)Hacer un objeto que herede un metodo privado LISTO
 3)Hacer un objeto que herede otra clase ya heredada (una tercer clase) LISTO
 4)Hcaer un objeto que herede un metodo protegido LISTO
 5)Hacer un objeto que utilice parent:: LISTO
@@ -586,30 +592,29 @@ TAREAS
 8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo  LISTO
 9)Hacer suma,resta,multiplicación y división usando IF-ELSE LISTO
 10)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK LISTO
-11)use el IF CORTO, que compare país y muestre su divisa  LISTO
+11)use el IF CORTO, que compare país y muestre su divisa LISTO
 12) use el IF CORTO, que compare mayoría de edad LISTO
 
 TARDE 40MIN , new record 32min
 
 PARTE 2
 
-13)Ejemplificar un FOR LISTO
+13)Ejemplificar un FOR LISTO 
 14)Ejemplificar un FOREACH LISTO
 15)FOREACH con un ARREGLO ASOCIATIVO y que sume LISTO
 16)Hacer un ciclo con foreach con nombres LISTO
 
-17)Sumar, restar, multiplicar y dividir un array con FOR y IF/ELSE  LISTO
-18)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH  LISTO
+17)Sumar, restar, multiplicar y dividir un array con FOR y IF/ELSE LISTO  
+18)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH LISTO
 
 
 19)Implementar el FOREACH e IF-ELSE en las 4 operaciones(suma, resta, multiplicación y division) LISTO
-20)Implementar el FOREACH y SWITCH en las 4 operaciones(suma, resta, multiplicación y division) LISTO
+20)Implementar el FOREACH y SWITCH en las 4 operaciones(suma, resta, multiplicación y division) LISTO 
 
 21)Hacer un bucle con WHILE LISTO
 22)Hacer un bucle con DO-WHILE 	LISTO
 
 TARDE 34MIN
-
 
 */
 

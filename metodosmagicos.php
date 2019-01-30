@@ -3,14 +3,14 @@
 
 class ejemplo
 {
-	public function __set($var1,$var2)
+	
+	function __set($var1,$var2)
 	{
-		echo "yo soy " . $var1 . " y yo soy su valor " . $var2;
+		echo "Es valor de la variable 1 es: ".$var1 . " y el valor de la variable 2 es :" . $var2;
 	}
 }
-$objeto = new ejemplo();
-$objeto->propiedad=3;
-
+$objeto1 = new ejemplo();
+$objeto1->metodo = "forifai";
 // TARDE 13MIN, practicarlo 1,2,3,4,5 para hacerlo 3 veces mas rápido
 
 /*

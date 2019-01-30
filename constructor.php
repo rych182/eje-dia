@@ -1,36 +1,6 @@
 <?php
-
-abstract class saludar
-{
-	public function saludo()
-	{
-		echo "Hola en español";
-	}
-}
- 
-class hello extends saludar
- {
- 	
- }
-
-$objeto = new hello();
-$objeto->saludo();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+echo 'Hello World';
+?>
 
 
 
@@ -270,21 +240,21 @@ $objeto->metodo();
 //1)Objeto con constructor y metele un valor con una variable LISTO
 //2)PROPIEDAD modificada desde afuera del objeto LISTO
 //3)Cambiando mi apodo cuando está protegido LISTO
-//4)Imprimiendo un objeto con 2 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra.  LISTO
+//4)Imprimiendo un objeto con 2 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra. LISTO
 //5)Cambiar PROPIEDAD PRIVADA desde afuera con una variable dentro de los parentesis del metodo LISTO
 //6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto LISTO
-//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. LISTO 
+//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. LISTO  
 //8)Crear un Constructor que modifique 3 propiedades publicas, las imprima y los valores se los pases desde afuera LISTO
 //9)Crear 3 clases, la clase no.2y3 heredaran la no.1, enla clase no.1 habrá 3 propiedades publicas y un constructor que "modificara las propiedades",
 //y un metodo con return que regresará una cadena de texto con los datos, en la clase no.2y3 tendran constructores que dentro de ellos usaran PARENT
 //para "heredar el constructor", de la clase 1, pero la clase 2 y 3 le agregaran un cuarto valor, abajito de donde heredan con PARENT, usaran un $this para
 //ese cuarto valor LISTO
-//10)Hacer una clase con 2 propiedades públicas, 2 metodods públicos y un constructor, el constructor modificara los metodos con variables que les darás valores
-//y se los pondrás desde afuera y los metodos imprimiran,pero usarás METODOS CADENA COMO EN LOS FRAMEWORKS, usando "returno $this" LISTO
+//10)Hacer una clase con 2 propiedades públicas, 2 metodods públicos y un constructor, el constructor modificara las propiedades públicas, que se usaran en los metodos
+//publicos y retornaras su valor usando return,pero usarás METODOS CADENA COMO EN LOS FRAMEWORKS, usando "returno $this" LISTO
 //11) Usar una clase abstracta, para usarla, ahuevo tienes que heredar y a la primer clase le pones abstract y ya esta. LISTO
 
 
-//TARDE 21MIN, esto es el máximo
+
 
 
 
