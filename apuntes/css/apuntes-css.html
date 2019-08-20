@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h3>Etiquetas meta importantisimas en SEO</h3>
+    <div><!--
+        <meta name="viewport" content="">
+        <meta name="keywords" content="Curso gratis de programacion">
+        <meta name="description" content="Curso gratis de programacion con ejemplos practicos del mundo laboral">
+        <meta name="author" content="ricgc.com">
+        <meta name="owner" content="Ricardo Garrido">
+        <meta name="robots" content="index,follow">-->
+        El title no debe de tener mas de 6 palabras
+        Con la barra vertical | separamos los titulos por si quieres poner 2
+        en el seo no ganan los mejores si no los que no se cansan
+        Nombrar las fotos con keywords ayuda en el SEO
+        <p>Google Trends https://trends.google.com.mx/trends/?geo=MX</p>
+        <p>Link para ver el rank de tu sitio web https://www.woorank.com/es</p>
+    </div>
+
+    <h2>Background</h2> 
+    <div>
+        <b>Imagen en horizontal</b><br>
+        background-image: url("gradient_bg.png");<br>
+        background-repeat: repeat-x;<br><br>
+
+        <b> la posición de una imagen.</b><br>
+        background-position: right top;<br><br>
+
+        <b>Valores del background-position</b><br><br>
+        <li>left top</li>
+        <li>left center</li>
+        <li>left bottom</li>
+        <li>right center</li>
+        <li>right bottom</li>
+        <li>center top</li>
+        <li>center center</li>
+        <li>center bottom</li><br>
+
+        
+        <b>Valores del background-position en porcentajes</b><br><br>
+        background-position: 10% 90%; 
+        <p>El valor de 10% es en X y el del 90% es en Y</p>
+    </div>
+
+    <div>
+        <b>Valores del background-size</b><br><br>
+        background-size: <b>auto;</b> Valor por defecto. La imagen de fondo se muestra en su tamaño original.
+        <br>
+        background-size: <b>cover;</b> Cambie el tamaño de la imagen de fondo para cubrir todo el contenedor,
+        incluso si tiene que estirar la imagen o cortar un poco uno de los bordes.
+    </div>
+
+    <div>
+        <h2>Bordes</h2>
+        <b>Left Border</b> <br>
+        p{<br>
+            border-left: 6px solid red;<br>
+            background-color: lightgrey;<br>
+            } <br><br>
+
+        <b>Bottom Border</b> <br>
+            p {<br>
+              border-bottom: 6px solid red;<br>
+              background-color: lightgrey;<br>
+            }      <br><br>
+    </div>
+
+    <div>
+        <h4>Pseudoelementos Before y After</h4>
+        div:before{
+            content:'Hola'; //El content es obligado
+        }
+        div:after{
+            content:'Hola'; //El after es obligado
+        }
+    </div>
+
+    <div>
+        <h4>Pseudo clases Hover, Focus, Active </h4>
+        a:focus{//Solo cuando se le da click, cambia de color y se mantiene el color
+            color: red;
+        }
+
+        a:active{//Cambia de color cuando se presiona, pero al dejar de presionarse vuelve a su anterior color
+            color:blue;
+        }
+    </div>
+
+    <div>
+        <h4>Float y clear</h4>
+        float: permite mover a la izquierda o derecha un elemento
+        clear: evite que se flote un elemento al lado que le indiques, acepta left, right y both
+        Si le pones del lado izquierdo
+
+        <h4>Crea tu propio "clearfix"</h4>
+        .clearfix {
+            overflow: auto;
+        }
+
+        .img2 {
+            float: right;
+        }
+
+        <!-- ejemplo: https://www.w3schools.com/css/css_float.asp
+
+            <p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+            <div class="clearfix">
+                <img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+            </div>
+        -->
+    </div>
+
+    <div>
+        <h3>Que es box-sizing</h3>
+        <!--https://www.w3schools.com/css/css_float.asp-->
+        Puedes crear fácilmente tres cajas flotantes una al lado de la otra. Sin embargo, cuando agrega algo que amplía el ancho de cada cuadro (por ejemplo, relleno o bordes), el cuadro se romperá. La propiedad de tamaño de caja nos permite incluir el relleno y el borde en el ancho (y altura) total de la caja, asegurándose de que el relleno permanezca dentro de la caja y que no se rompa.
+
+    </div>
+</body>
+</html>      

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2>html</h2>
+	<h3>Valores de un input</h3>
+	<p>Seleccionar el formulario: < input t ype="text" n ame="nombre" a utofocus=" autofocus"></p> 
+	<p>Desabilitar un formulario: < input type="text" name="apellido" disabled="disabled"></p>
+	<p>Limitar el número de caracteres máximo: < input type="text" name="apellido" maxlength="5"></p>
+	<p>Poner el mínimo de caracteres permitido: < input type="text" name="apellido" minlength="5"></p>
+	<p>Solo permitir usar letras: < input type="text" name="apellido" pattern="[A-Z]"></p>
+	<p>Te obliga a llenar ese campo: < input type="text" name="apellido" required="required"></p>
+	<p>Pone un texto antes de que hagas focus en el formulario: < input type="text" name="apellido" placeholder="Llena el campo"></p>
+	<p>Te marca la casilla por default < input type="" name="" checked="checked"></p>
+
+	<h3>Tipos de input</h3>
+	<ul>
+		<li>button: < input type="button" name=""></li>
+		<li>checkbox: < input type="checkbox" name="sexo" value="hombre"></li>
+		<li>tabla de colores < input type="color" name=""></li>
+		<li>email : < input type="email" name=""></li>
+		<li>Subir archivo y varios archivos: < input type="file" name="" multiple="multiple"></li>
+		<li>Seleccionar números: < input type="number" name=""></li>
+		<li>Contraseña: < input type="password" name=""></li>
+		<li>Radio buttons: <input type="radio" name=""></li>
+	</ul>
+
+	<h2>Seleccionar opciones</h2>
+	Super heroes:
+	<select name="Superheroes">
+		<option value="Etiqueta">Etiqueta select > Etiqueta option</option>
+		<option value="Spiderman">Spiderman</option>
+		<option value="Wolverine">Wolverine</option>
+		<option value="Batman">Batman</option>
+		<option value="capitan">Capita américa</option>
+	</select>
+	El value es para recoger los valores seleccionados en el backend
+
+
+	<h3>Funciones mas usadas de PHP</h3>
+	<ul>
+		<li><b>Sort</b>: Cuenta cuantas posiciones tiene un array</li>
+		<li><b>Empty</b>: verifica si la variable esta vacia</li>
+		<li><b>Count</b>: cuenta</li>
+		<li><b>array_search</b>: busca un dato en el array</li>
+		<li><b>array_push</b>: ingresa datos en el array</li>
+		<li><b>strtoupper</b>: convierte el texto en mayúscula </li>
+		<li><b>is_string</b>: comprueba si la variable es una cadena de texto</li>
+		<li><b>is_array</b>: comprueba si es un array</li>
+		<li><b>is_integer</b>: comprueba si es un número entero</li>
+		<li><b>is_bool</b>: comprueba si es un booleano, true or false</li>
+		<li><b>var_dump</b>: te muesta que contiene esa variable</li>
+		<li><b>array_keys</b>: te muestra el nombre de los indices de un array asociativo</li>
+		<li><b>session_start</b>: Sirve para iniciar una sesión</li>
+		<li><b>session_destroy</b>Sirve para cerrar una sesión</li>
+		<li><b>feof: </b>Comprueba si el puntero a un archivo está al final del archivo</li>
+		<li><b>fgets: </b>function returns a line from an open file.</li>
+		<li><b>fwrite: </b>puedes escribir texto en un archivo con esta funcion</li>
+		<li><b>fclose: </b>Cierra un puntero a un archivo abierto</li>
+		<li><b>copy: </b> copia un archivo</li>
+		<li><b>file_exists:</b> Sirve para comprobar si el archivo existe</li>
+		<li><b>is_dir:</b> Comprueba que exista la carpeta</li>
+		<li><b>opendir: </b> Abre la carpeta que le asignas</li>
+		<li><b>header("Refresh: 5; URL=index.php");</b>Te redirecciona en el lapso </li>
+		<li><b>move_uploaded_file</b>Agarra el archivo que acabamos de subir y guardalo en el destino que tu quieras</li>
+		<li><b></b></li>
+		<li><b></b></li>
+		<li><b></b></li>
+
+	</ul>
+
+
+	<h2>Incrustar PHP en HTML</h2>
+	<p>Al incrustar codigo debes usar la sig sintaxis alternativa:</p>
+	<p>
+		< ? php foreach ($tabla as $categoria => $value) : ?><br>
+			<th>< ? =$categoria ? ></th><br>
+		< ? php endforeach;? ><br>
+	</p>
+	<p>Esto es para hacerlo mas visual, también existe el <b>endif</b> o el <b>endfor</b>, cada funcion tiene su propio <b>end</b></p>
+
+	<h2>Include y require</h2>
+	<p>Un <b>include</b> nos permite reutilizar un archivo tantas veces como queramos, esto es muy conveniente cuando se utilizan funciones o cabecera de una página, así no se copia y pega o se repite una lógica, y tus proyectos son mas organizados y están mas optimizados</p>
+
+	<h3>Include_once</h3>
+	<p>Con include_once solo se incluye una vez, ya que si tu pusieras <b>include</b> 'header.php'; 2 veces, se mostraría 2 veces tu encabezado. </p>
+
+	<h3>Require</h3>
+	<p>Si carga mal el fichero, va a parar la ejecución y no se mostrara nada, cosa que con el <b>include</b> se muestra lo poco que llegue a funcionar, <b>es mas recomendable usar el require</b></p>
+
+	<h3>require_once</h3>
+	<p>Para la ejecución y no muestra nada si algo se carga mal, y solo se muestra una vez, <b>funciona igual al include_once</b> este es el que <b>mas se recomienda</b></p>
+
+	<h2>Cookies</h2>
+	<p><b>Cookies:</b>Es un fichero que se almacena en la computadora del usuario que visita la página, con el fin de recordar datos o rastrear. el comportamiento en la web</p>
+	<p>Son muy útiles para recordar los inicios de sesión y la desventaja que tiene es que se almacenan en ficheros en el disco duro, por lo tanto el usuario puede manipular esas cookies y solo pueden almacenarse una cantidad limitada de datos</p>
+	<p>Usar una cookie es peor que utilizar sesiones</p>
+	<p>Las cookies se usan cuando queremos guardar un dato a lo largo del tiempo o necesitamos hacer un rastreo de una información</p>
+
+	<hr>
+
+	<h1>SQL</h1>
+	<h2>Restricciones de integridad</h2>
+	<ul>
+		<li><b>not null:</b> significa que no puede quedar vacío, siempre debe de haber algo en ese camp</li>
+		<li><b>null:</b> Si puede tener campos vacíos</li>
+		<li><b>default'Hello World':</b> tiene el valor que le pongas por defecto</li>
+		<li><b>auto_increment : </b>Solo están disponibles para las llaves primarias</li>
+		<li><b></b></li>
+	</ul>
+
+	<h2>Comandos/funciones de SQL</h2>
+	<ul>
+		<li><b>drop table "nombretabla";</b>  //Borra la tabla</li>
+		<li><b>USE "nombre base datos"; </b> //Usas la base de datos</li>
+		<li><b>SHOW TABLES;</b> //Te muestra tus bases de datos</li>
+		<li><b>create table "nombretabla"; //Crea una tabla nueva</b></li>
+		<li><b>ALTER TABLE "nombre de la tabla" RENAME TO "nuevo nombre" :</b> modifica el nombre de una tabla</li>
+		<li><b>SHOW TABLE "nombre de la tabla"</b> : muestra el nombre de la tabla</li>
+		<li><b>ALTER TABLE "nombre de la tabla" CHANGE "nombre de la columna" "nuevo nombre de la columna" varchar(100) null;</b> : Modifica el nombre de una columna</li>
+		<li><b>desc "nombre de la tabla";</b> te describe como esta constituida la tabla</li>
+		<li><b>ALTER TABLE "nombre tabla" MODIFY "nombre columna" char(40) not null;</b>  Modifica columna sin cambiar nombre </li>
+		<li><b>ALTER TABLE "nombre tabla" ADD "campo" varchar(100) null;</b> Añade una columna</li>
+		<li><b>ALTER TABLE "nombre tabla" ADD "nombre columna" varchar(100) null;</b>: Modifica columnas</li>
+		<li><b>ALTER TABLE "nombre tabla" ADD CONSTRAINT uq_email UNIQUE(email);</b> Añade restricción unica a la columna, par que no se repita el correo</li>
+		<li><b>ALTER TABLE "nombre tabla" DROP "nombre columna";</b> Borrar una columna</li>
+		<li><b>pk_nombretabla</b>: significa primary key</li>
+		<li><b>CONSTRAINT</b>: restricción</li>
+		<li><b>UNIQUE</b>: signifíca que será único</li>
+		<li><b>ENGINE=InnoDb</b> forma de almacenar los datos, nos permite mantener la integridad referencial</li>
+		<li><b>ON DELETE CASCADE</b> Cuando la categoría de una entrada se borre, también se borre el registro con el cuál está relacionado</li>
+		<li><b>ON DELETE CASCADE</b> Hace una actualización en cascada(No se usa mucho)</li>
+		<li><b>ON DELETE SET NULL</b> Cuando borras la categoría, la categoría se ponga en null</li>
+		<li><b>ON DELETE NO ACTION</b> Que cuando se borre no se haga nada</li>
+		<li><b>ON DELETE SET DEFAULT</b>(es muy útil)</li>
+		<li><b></b></li>
+		<li><b></b></li>
+	</ul>
+
+	<h2>Insert Básico</h2>
+	<ol>
+		<li><b>USE "nombre base datos";</b></li>
+		<li><b>SHOW TABLES;</b></li>
+		<li><b>DESC "nombre tabla"</b></li>
+		<li><b>INSERT INTO usuarios(email,password) VALUES('admin@admin.com','admin');</b> //Inserta datos específicos</li>
+	</ol>
+
+	<h2>Select Básico</h2>
+	<ul>
+		<li><b>SELECT * FROM "nombre tabla"</b> // selecciona todo de la tabla </li>
+		<li><b>ORDER BY id ASC;</b> //Ordena por id ascendentemente</li>
+		<li><b>SELECT id,email, (id+7) AS 'OPERACION' FROM usuarios ORDER BY id; </b> //Esta wea es UTIL</li>
+	</ul>
+
+	<h2>Funciones aritmeticas SQL</h2>
+	<ul>
+		<li><b>ABS(7)</b> Te da el valor absoluto</li>
+		<li><b>CEIL(7.34)</b> Redondea hacia arriba</li>
+		<li><b>FLOOR(7.34)</b> Redonde hacia abajo</li>
+		<li><b>RAND()</b> Número aleatorio</li>
+		<li><b>ROUNDD(7.91,1)</b> Redondea el número de decimales que le digas</li>
+		<li><b>SQRT()</b> Raiz cuadrada</li>
+		<li><b>TRUNCATE(7.3456 , 2)</b> Indicas el número de decimales que se vean, si hay 4 y quieres que solo se vean 2</li>
+		<li><b><a href="https://www.w3resource.com/sql/sql-functions.php">Más recursos</a></b></li>
+		<li><b></b></li>
+	</ul>
+
+	<h2>Funciones para texto(Las mas importantes)</h2>
+	<ul>
+		<li>SELECT UPPER("nombre columna") FROM "nombre tabla";<b></b> // Te escribe el resultado en mayúsculas</li>
+		<li><b>SELECT CONCAT("columna", '', "columna") FROM "tabla";</b> //concatena los resultados</li>
+		<li><b>También se pueden combinar funciones: </b> SELECT UPPER(CONCAT(nombre, '', apellidos)) FROM usuarios;</li>
+		<li><b>LENGTH</b>SELECT LENGTH(CONCAT(nombre, '', apellidos)) FROM usuarios; // Te da la longuitud de caracteres, también se puede hacer esto :<br> SELECT LENGTH(CONCAT(nombre, '', apellidos)) FROM usuarios;</li>
+		<li><b>Seleccionar fecha</b> <br>
+		</li>
+
+	</ul>
+
+	<h2>Funciones para fecha</h2>
+	<ul>
+		<li><b>SELECT email, fecha FROM usuarios;</b></li>
+		<li><b>fecha actual</b> // SELECT email, fecha, CURDATE() FROM usuarios;</li>
+		<li><b>Ponerle un alias a la fecha actual</b><br>
+		SELECT email, fecha, CURDATE() AS 'Fecha actual' FROM usuarios;</li>
+		<li><b>Días que hay de diferencia:</b> SELECT email, DATEDIFF(fecha, CURDATE()) AS 'Fecha actual' FROM usuarios;</li>	
+		<li><b>DAYOFMOTH: te da el día del mes</b>SELECT email, DAYOFMONTH(fecha) AS 'Fecha actual' FROM usuarios;</li>	
+		<li><b>#DAYOFWEEK: te da el día de la semana</b> SELECT email, DAYOFWEEK(fecha) AS 'Fecha actual' FROM usuarios;</li>	
+		<li><b></b>SELECT email, DAYOFYEAR(fecha) AS 'Fecha actual' FROM usuarios;</li>
+		<li><b>#MONTH: te da el mes de esa fecha</b> SELECT email, MONTH(fecha) AS 'Fecha actual' FROM usuarios;</li>
+		<li><b>#YEAR: te da el año de esa fecha</b>SELECT email, YEAR(fecha) AS 'Fecha actual' FROM usuarios;</li>
+		<li><b>#HOUR: te da la hora de esa fecha </b>SELECT email, HOUR(fecha) AS 'Fecha actual' FROM usuarios;</li>
+		<li><b>CURTIME: te da la hora actual</b>SELECT email, CURTIME() AS 'Fecha actual' FROM usuarios</li>
+		<li><b>#SYSDATE: te da la hora actual basandose en lo que tiene tu sistema operativo</b>SELECT email, SYSDATE() AS 'Fecha actual' FROM usuarios;</li>
+		<li><b>#DATEFORMAT(fecha '%d-%m-%Y') cambia el formato de fecha gringo a europeo</b>SELECT email, DATEFORMAT(fecha '%d-%m-%Y') FROM usuarios;</li>		
+	</ul>
+
+	<h2>Funciones generales</h2>
+	<ul>
+		<li><b>Te dice si un campo es nullo</b> //SELECT email, ISNULL(apellidos) FROM usuarios;</li>
+		<li><b>#STRCMP distingue si 2 valores son iguales o existentes</b> SELECT email, STRCMP('hola','hola1') FROM usuarios;</li>
+		<li><b>
+#USER: Te dice el usuario que estas usando en mysql, root o si es otro</b> // SELECT email, USER() FROM usuarios;</li>
+		<li><b>
+#DISTINCT USER(): te muestra el usuario y solo 1 vez, por si te repite el usuario varias veces</b>SELECT DISTINCT USER() FROM usuarios;</li>
+		<li><b>#IFNULL(campo,'hola mundo') te permite agregar texto si tu campo esta nullo</b>SELECT IFNULL(apellidos,'Este campo esta vacío') FROM usuarios;</li>
+	</ul>
+
+	<h2>WHERE, ORDER BY , LIMIT</h2>
+	<strong>WHERE</strong>
+	<ul>
+		<li>SELECT * FROM usuarios WHERE nombre = 'fulano';</li>
+		<li>#Ejmplos: nombre y apellidos de los usuarios que se registraron en el 2019 <br>
+SELECT nombre, apellidos FROM usuarios WHERE YEAR(fecha) = 2019;</li>
+		<li>#Ejmplos: nombre y apellidos de los usuarios que NO se registraron en el 2019 <br>
+SELECT nombre, apellidos FROM usuarios WHERE YEAR(fecha) != 2019;</li>
+		<li>#Ejmplos: nombre y apellidos de los usuarios que NO se registraron en el 2019 y si hay nulos(que no tengan fecha)<br>
+SELECT nombre, apellidos FROM usuarios WHERE YEAR(fecha) != 2019 OR ISNULL(fecha);</li>
+		<li>#Ejercicio: Mostrar  email de los usuarios cuyo apellidos tengan la letra A <br>
+SELECT email FROM usuarios WHERE apellidos LIKE '%a%';</li>
+		<li>#Ejercicio: Mostrar  email de los usuarios cuyo apellidos tengan la letra A <br>
+#puse "arc" por que pertenece a gARCia, puedes poner un conjunto de letras o 1 letra <br>
+SELECT email FROM usuarios WHERE apellidos LIKE '%a%' AND password = 1234;</li>
+		<li>#Ejercicio: mostrar los usuarios que se hayan registrado en un año inpar <br>
+SELECT * FROM usuarios WHERE (YEAR(fecha)%2 != 0);</li>
+		<li>#Muestrame los registros de la tabla usuarios cuyo nombre tenga mas de 5 letras y que se hayan registrado antes del 2020 y mostrar el nombre en mayúsculas <br>
+SELECT UPPER(nombre), apellidos FROM usuarios WHERE LENGTH(nombre) > 5 AND YEAR(fecha) < 2020;</li>
+	</ul>
+	<h2>order by</h2>
+	<ul>
+		<li>#muestrame el orden por id pero descendente <br>
+SELECT * FROM usuarios ORDER BY id DESC;</li>
+		<li>#Muestrame el orden por fecha descendente <br>
+SELECT * FROM usuarios ORDER BY fecha DESC;</li>
+	</ul>
+
+	<h2>LIMIT</h2>
+	<ul>
+		<li>#Limita lo que muestra en el número de resultados o un rango <br>
+SELECT * FROM usuarios LIMIT 1; <br>
+SELECT * FROM usuarios LIMIT 0,2;</li>
+	</ul>
+
+	<h2>Funciones de agrupamiento</h2>
+	<ul>
+		<li>AVG: me permite sacar la media</li>
+		<li>COUNT() : Contar el número de elementos</li>
+		<li>MAX:	Devuelve el valor máximo del grupo</li>
+		<li>MIN: 	Valor mínimo del grupo</li>
+		<li>SUM: 	Suma todas las expresiones del grupo</li>
+	</ul>
+
+	<h2>Explicaciones SQL</h2>
+	<ul>
+		<li><b>#CONSULTA MULTITABLA</b><br>
+		Son consultas que sirven para consultar varias tablas en una sola sentencia</li>
+		<li><b>#inner join</b><br>
+		Devuelve unicamente aquellos registros que tienen valores identicos en 2 campos y de esa manera unir dos tablas o varias</li>
+		<li><b>LEFT JOIN</b><br>
+		cuando lo usas hay un enunciado y antes del 
+		left declaras "FROM 'nombre de la tabla'" y después del LEFT JOIN declaras otras tabla, si entre esas 2 tablas hay una coincidencia de un valor nulo o 0, entonces lo muestra</li>
+	</ul>
+	<h2>Vista</h2>
+	<p>Una consulta que se queda almacenada en la base de datos, se utiliza como si fuera una tabla virtual, tiene asociaciones con una o varias tablas y no ha almacenado los datos, si no que trabaja con datos de las tablas que ya están definidas, así en todo momento esta actualizada y aporta facilidad a la hora de hacer consultas muy complejas que vamos a estar haciendo muchas veces</p>
+
+	<strong>Explicación Victor Robles</strong>
+	<p>Las podemos definir como una consulta almacenada en la base de datos que se utiliza como una tabla virtual. <br> No almacena datos, sino que utiliza asociaciones y los datos originales de las tablas, de forma que siempre se mantiene actualizada</p>
+	<br>
+	<strong>Vistas</strong>
+	<ul>
+		<li><b>Crear una vista</b>: CREATE VIEW "nombre de la vista" AS "consulta"</li>
+		<li><b>Ver la vista que creaste</b>: SHOW CREATE VIEW "nombre de la vista"</li>
+		<li><b>Si quieres ejecutar la vista</b>: SELECT * FROM "nombre de la vista";</li>
+		<li><b>Añadir mas condiciones a la vista</b>: SELECT * FROM entradas_con_nombres WHERE Autor = 'vic';</li>
+		<li><b>Borrar un vista: </b>DROP VIEW "nombre de la vista"</li>
+	</ul>
+	
+	<h2>TIPS CONSULTAS</h2>
+	<ul>
+		<li><b>GROUP</b> es para combinar los datos de una columna</li>
+		<li><b>ORDER</b> es para ordenar los resultados de una consulta en base a una columna </li>
+		<li><b>IN</b> se usa antes de hacer una subconsulta</li>
+		<li><b>WHERE</b> es como el IF, una condicional</li>
+		<li><b>INNER JOIN</b> se usa cuando vas a mezclar una tabla con otra</li>
+		<strong>Ejemplo</strong><br>
+		<p>SELECT e.id, co.modelo, c.nombre, c.ciudad FROM encargos e <br>
+INNER JOIN coches co ON co.id = e.coche_id <br>
+INNER JOIN clientes c ON c.id = e.cliente_id <br>
+WHERE c.ciudad = 'Barcelona'; <br><br>
+
+Me vas a seleccionar las 4 columnas(e.id, co.modelo, c.nombre, c.ciudad)
+ que pusiste y declaro 1 tabla que voy a combinar(encargos e)
+y me la vas a mezclas con la tabla "coches co" IF coinciden la columna de mi tabla 
+coches(co.id) con "la columna(e.coche_id) de tabla de arriba"(encargos e)
+ y mezclame la tabla "clientes c" IF
+coinciden la columna(c.id) de mi tabla(clientes c)
+ con la "primer tabla que declare"(encargos e) y su columna(e.cliente_id)</p>
+		<li><b>ON</b> es una condicional que se usa junto con el INNER JOIN</li>
+		<li>INNER JOIN <b>fijate cuantas tablas vas a utilizar y solo usas esas, ya después vez como acomodar todo</b></li>
+		<li><b>LIMIT</b> Los limit no se pueden usar en una subconsulta</li>
+	</ul>
+
+</body>
+</html>

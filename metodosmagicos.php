@@ -1,6 +1,111 @@
 <?php
 //GRACIAS DIOS POR MOSTRARME LOS ERRORES
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+							Ejercicio: Mostrar errores
+
+try{
+	if (isset($_GET['id'])) {
+		echo "<h1>El parameto de la url es: {$_GET['id']}</h1>";
+	}else{
+		throw new Exception("Falto el parametro en la URL");		
+	}
+} catch(Exception $e){
+	echo "Ha habido un pinshi error: ". $e->getMessage();
+}finally{ //El finally casi no se usa, pero sirve para avisar cuando se acaba esta estructura
+	echo "<br>Aquí se acaba";
+}
+
+							Ejercicio con toString
+
+class Usuario
+{
+	public $nombre;
+	public $email;
+
+	public function __construct()
+	{
+		$this->nombre = "Ricardo Garrido";
+		$this->email = "ric@hotmail.com";
+		echo "Creando objeto<br>";
+	}
+
+	public function __toString()
+	{
+		return "Hello, {$this->nombre} estas registrado con {$this->email}";
+	}
+
+	public function __destruct()
+	{
+		echo "<br>Destruyendo el objeto";
+	}
+}
+
+$objeto = new Usuario();
+echo $objeto;
+//echo $objeto->email;
+
+
+							Ejercicio con trait
+trait Utilidades{
+	public function mostrarNombre()
+	{
+		echo "<h1>El nombre es ".$this->nombre."<h1>";
+	}
+}
+
+class Coche
+{
+	public $nombre = "Bocho";
+	public $marca;
+	use  Utilidades;
+}
+
+class Persona
+{
+	public $nombre="Ricardo";
+	public $apellidos;
+	use  Utilidades;
+}
+
+class VideoJuego
+{
+	public $nombre="Star Craft";
+	public $anio;
+	use  Utilidades;
+}
+
+$coche = new Coche();
+$persona = new Persona();
+$videojuego = new VideoJuego();
+
+$coche->mostrarNombre();
+$persona->mostrarNombre();
+$videojuego->mostrarNombre();
+
+
+
+
+
+/*
 class ejemplo
 {
 	
@@ -11,6 +116,9 @@ class ejemplo
 }
 $objeto1 = new ejemplo();
 $objeto1->metodo = "forifai";
+*/
+
+
 // TARDE 13MIN, practicarlo 1,2,3,4,5 para hacerlo 3 veces mas rápido
 
 /*
@@ -18,28 +126,6 @@ Flexboxfroggy
 Ejercicios curso flexbox
 checar curso Codigo facilito, 1(display), 2(poner imagen de fondo),3(positions), 4(header), 5(transition y animation) 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -103,7 +189,7 @@ class ejemplo
 	}
 }
 $objeto = new ejemplo();
-$objeto->resta();
+$objeto->suma();
 //CALL se ejecuta en el instante en el que estamos llamando a un metodo que no existe
 */
 
@@ -112,6 +198,22 @@ $objeto->resta();
 
 
 /* DESTRUCTOR
+
+class Persona
+{
+	function __construct()
+	{
+		echo "Hola mundo<br>";
+	}
+	function __destruct()
+	{
+		echo "Adios";
+	}
+}
+$objeto = new Persona();
+for ($i=0; $i <=10; $i++) { 
+	echo $i."<br>";
+}
 
 class pinshiClase
 {
@@ -131,6 +233,56 @@ $objeto2 = new pinshiClase("el crew");
 //$objeto2= null;
 echo "Soy un codigo <br>";
 
+
+Ejercicios
+1)Destructor
+2)Call
+3)Get
+4)Set
+5)Trait ó sobrecarga
+6)toString
+7)Mostrar excepción o error
+8)Hacer un autoload
+
+
+
+
+
+								NOTAS
+
+trait/sobrecarga: nos permite compartir un metodo en distintas clases sin tener
+que heredarlas
+
+construct: no se deben imprimir cosas con el constructor, es mala practica.
+
+{}: Se llama interpolación de variables, para imprimir una variable sin usar comillas
+
+toString: Te permite imprimir el objeto como si fuera un string
+
+AUTOLOAD:
+//un Autoload sirve para no hacer muchos require_once en un archivo
+//Creas un archivo autoload.php donde meteras esto
+function autocargar_clases($clase)
+{
+	require_once 'clases/'. $class . '.php';
+}
+spl_autoload_register('autocargar_clases');
+
+//Esto va en el archivo index.php
+//Debes tener 3 archivos con 1 clase en cada archivo
+require_once 'autoload.php';
+
+$usuario = new Usuario();
+echo $usuario->nombre;
+echo "<br>";
+echo $usuario->email;
+
+$categoria = new Categoria();
+echo "<br>".$categoria->nombre;
+
+
+TIPS:
+Propiedades: casi siempre deben de ser privadas
 
 */
 

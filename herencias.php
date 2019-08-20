@@ -1,5 +1,52 @@
 <?php 
+// Apuntes al final del archivo
 
+
+interface LaboresMatutinas{ 
+	public function levantarme();
+	public function asearme();
+	public function desayunar();
+	public function prepararme();
+}
+
+class preparDia implements LaboresMatutinas
+{
+	//private $hacerCosas;
+	public function levantarme()
+	{
+		echo "Pararme y tender mi cama";
+	}
+	public function asearme()
+	{
+		echo "<br>Bañarme y lavarme los dientes";	
+	}
+	public function desayunar()
+	{
+		echo "<br>Cocinar mi desayuno, comerlo, lavar trastes y lavarme los dientes";
+	}
+	public function prepararme()
+	{
+		echo "<br>Cambiarme, arreglarme e irme";
+	}
+	public function saludar()
+	{
+		echo "hola mundo";
+	}
+}
+
+$objeto = new preparDia();
+//LaboresMatutinas::preparDia();
+//preparDia::LaboresMatutinas();
+$objeto->
+
+
+
+
+
+
+
+
+/*
 class ejercicio
 {
 	public function metodo($cadena)
@@ -15,9 +62,46 @@ class ejercicio
 $cadena = array(1,2,3,4,5);
 $objeto = new ejercicio();
 $objeto->metodo($cadena);
+*/
 
+/*				23-Interface-Implements
 
+interface LaboresMatutinas{ 
+	public function levantarme();
+	public function asearme();
+	public function desayunar();
+	public function prepararme();
+}
 
+class preparDia implements LaboresMatutinas
+{
+	//private $hacerCosas;
+	public function levantarme()
+	{
+		echo "Pararme y tender mi cama";
+	}
+	public function asearme()
+	{
+		echo "<br>Bañarme y lavarme los dientes";	
+	}
+	public function desayunar()
+	{
+		echo "<br>Cocinar mi desayuno, comerlo, lavar trastes y lavarme los dientes";
+	}
+	public function prepararme()
+	{
+		echo "<br>Cambiarme, arreglarme e irme";
+	}
+	public function saludar()
+	{
+		echo "hola mundo";
+	}
+}
+
+$objeto = new preparDia();
+$objeto->saludar();
+
+*/
 
 
 
@@ -468,8 +552,44 @@ $objeto->mostrarArreglos($nombres);
 
 
 
-/*EJERCICIO CON STATIC
+/*						EJERCICIO CON STATIC(metodos y propiedades)
 
+class Perro
+{
+	const saludo = "Hola mundo";
+	public static $color = "cafe";
+	public static $raza = "Labrador";
+	public static function ladrar()
+	{
+		echo "Gua gua!". self::$color . " " . self::$raza;
+	}
+}
+echo Perro::$color;
+//Si quieres acceder a las propiedades de la clase estatica para cambiar algo
+$Perro::$color = "rojo";
+//Si quieres acceder a la comnstante
+$Perro::saludo;
+
+								6.1-Ejercicio clase ABSTRACTA
+
+
+abstract class Persona
+{
+	public function saludo()
+	{
+		echo "Hello World";
+	}
+}
+
+class Perro extends Persona
+{
+	
+}
+
+$objeto = new Perro();
+$objeto->saludo();
+
+								6-Ejercicio con CLASE ESTATICA
 class otraClase
 {
 	public static function metodo()
@@ -481,10 +601,43 @@ class otraClase
 otraClase::metodo();
 */
 
+/*										5.1-HEREDAR CONSTRUCTOR CON PARENT
+class PinshiClase
+{
+	public $nombre;
+	public $apellido;
+	public $edad;
+	function __construct()
+	{
+		$this->nombre = "ric";
+		$this->apellido = 'gar';
+		$this->edad = 32;
+	}
+}
+
+class otraClase extends PinshiClase
+{
+	public $pais;
+	public $ciudad;
+	function __construct()
+	{
+		parent::__construct();
+		$this->pais = 'mexalandia';
+		$this->ciudad = 'tapatiolandia';
+	}
+}
+$objeto1 = new PinshiClase();
+$objeto2 = new otraClase();
+
+var_dump($objeto1);
+var_dump($objeto2);
+/*
 
 
 
-/* EJERCICIO CON parent::
+
+
+/* 									5-EJERCICIO CON parent::
 
 class perros
 {
@@ -571,18 +724,20 @@ $objeto->razonar();
 
 /*
 TAREAS
-1)hacer un objeto que herede algo LISTO 
-2)Hacer un objeto que herede un metodo privado LISTO
-3)Hacer un objeto que herede otra clase ya heredada (una tercer clase) LISTO
-4)Hcaer un objeto que herede un metodo protegido  LISTO
-5)Hacer un objeto que utilice parent:: LISTO
-6)Utilizar una clase usando STATIC  LISTO
+1)hacer un objeto que herede algo LISTO
+2)Hacer un objeto que herede un metodo privado
+3)Hacer un objeto que herede otra clase ya heredada (una tercer clase)
+4)Hcaer un objeto que herede un metodo protegido 
+5)Hacer un objeto que utilice parent::
+5.1)Heredar un constructor usando parent
+6)Utilizar una clase usando STATIC 
+6.1)Hacer una clase abstracta y utilizarla
 
-7)hacer una clase que sume, reste, multiplique y divida LISTO
-8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo LISTO  
-9)Hacer suma,resta,multiplicación y división usando IF-ELSE LISTO
-10)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK LISTO
-11)use el IF CORTO, que compare país y muestre su divisa LISTO
+7)hacer una clase que sume, reste, multiplique y divida 
+8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo   
+9)Hacer suma,resta,multiplicación y división usando IF-ELSE 
+10)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK 
+11)use el IF CORTO, que compare país y muestre su divisa 
 12) use el IF CORTO, que compare mayoría de edad 
 
 TARDE 40MIN , new record 32min
@@ -603,8 +758,18 @@ PARTE 2
 
 21)Hacer un bucle con WHILE 
 22)Hacer un bucle con DO-WHILE 	
+23)Hacer un ejercicio con interface e implements
 
 TARDE 34MIN
+
+
+Clases abstractas: sirven para que no las puedas usar a menos que la heredes
+
+Interface :Se utilizan para cosas muy complejas
+Es un proceso entero, deben ser usarse los metodos exactos para ese proceso
+de lo contrario no se hara una tarea. A diferencia de las abstracciones que
+se heredan "forzosamente" si quieres utilizarlas, en las interfaces no se heredan forzosamente, si quieres las usas, si no, no.
+
 
 */
 

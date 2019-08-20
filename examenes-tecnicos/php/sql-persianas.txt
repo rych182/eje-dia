@@ -1,0 +1,101 @@
+Tablas: departamento y empleado
+
+empleados TI: 2
+Empleados Sales: 6
+Empleados RH: 4
+
+Se puede relacionar la tabla grupos y vendedores del ejemplo de VR
+
+Vendedores -> grupos
+Entrevista tecnica
+Empleados -> departamento
+
+Clave reflexiva a la misma tabla, empleados tienen jefes
+Hay una clave de referencia del empleado y su jefe en el víde de VR, en la tabla de vendedores
+
+La "tabla de vendedores" relaciona el "grupo_id" con el id de la "tabla grupos"
+====================
+NOTA IMPORTANTISIMA
+Cuando vayas a relacionar tablas relaciona el id y el nombre, ejemplo
+1)Relacionar tabla encargos con tabla coches:
+Dentro de la tabla encargos habrá id y coche_id y estará relacionado con la tabla coches con su id
+
+=====================
+
+Lo que pide el examen:
+1)Mostrar una tabla que muestre departamentos que tengan menos de 5 empleados
+2)Mostrar cuanto gana un departamento en total
+
+3)Mostrar una tabla de empleados donde muestre sus sueldos de forma descendente.
+4)Mostrar una tabla que muestre el nombre del depto, número de empleado y salario total y que se ordene descendentemente
+
+--------------------------------------------------------------------------------AQUÍ empiezan las respuestas.
+Crear tabla departamentos
+
+CREATE TABLE departamentos(
+id int(10) auto_increment NOT null,
+nombre_departamento varchar(100) NOT null,
+CONSTRAINT pk_departamentos PRIMARY KEY(id)
+)ENGINE=InnoDB;
+
+Crear tabla empleados
+
+CREATE TABLE empleados(
+id int(10) auto_increment not null,
+nombre_completo varchar(100) not null,
+id_departamento int(10) NOT null,
+salario int(20),
+CONSTRAINT pk_empleados PRIMARY KEY(id),
+CONSTRAINT fk_empleado_departamento FOREIGN KEY(id_departamento) REFERENCES departamentos(id)
+)ENGINE=InnoDB;
+
+Vamos a usar los apodos como indica victor robles
+
+			Insertar departamentos
+
+INSERT INTO departamentos VALUES(null,"Sales");
+
+			Insertar empleados
+Ventas = 1
+RH = 2
+IT = 3
+
+INSERT INTO empleados VALUES(NULL,"Bill Gates",3,15000);
+INSERT INTO empleados VALUES(NULL,"Elon Musk",3,30000);
+INSERT INTO empleados VALUES(NULL,"Nayeli Garcia",2,6000);
+INSERT INTO empleados VALUES(NULL,"Azucena Lopez",2,8000);
+INSERT INTO empleados VALUES(NULL,"Laura Paredes",2,12000);
+INSERT INTO empleados VALUES(NULL,"Araceli Ruiz",2,20000);
+INSERT INTO empleados VALUES(NULL,"Luis Garcia",1,4000);
+INSERT INTO empleados VALUES(NULL,"Jose Lopez",1,6000);
+INSERT INTO empleados VALUES(NULL,"Karen Aparicio",1,10000);
+INSERT INTO empleados VALUES(NULL,"David Padilla",1,15000);
+INSERT INTO empleados VALUES(NULL,"Gabriel Serrano",1,20000);
+INSERT INTO empleados VALUES(NULL,"Alejandra Montes",1,22000);
+
+			Consultas
+
+**Modificar
+//Modificame la tabla empleados, aumentale 10% el sueldo "si" el salario es igual o mayor a 6mil
+UPDATE empleados SET salario= salario * 1.1 WHERE salario >= 6000
+
+***Mostrar
+//Mostrar los empleados que ganen menos de 10mil
+select * from empleados WHERE salario < 10000;
+
+***Mostrar
+
+SELECT nombre_departamento, nombre_completo, FROM empleados, departamentos;
+
+Ejercicios resueltos:
+
+2)SELECT SUM(e.salario) as "sueldo total por depto", d.nombre_departamento FROM empleados e INNER JOIN departamentos d ON e.id_departamento = d.id GROUP BY e.id_departamento;
+
+3)select nombre_completo, salario FROM empleados order by salario DESC;
+
+4)SELECT e.id, d.nombre_departamento, e.salario FROM empleados e INNER JOIN departamentos d on e.id_departamento = d.id ORDER BY salario DESC;
+
+
+FUNCIONES USADAS EN SQL
+ADV();
+ROUND();

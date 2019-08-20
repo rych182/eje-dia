@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title></title>
+	<style type="text/css">
+
+		div{
+			background-color: #a8cf45;
+			margin: 10px 10px;
+			text-align: center;
+			font-weight: bolder;
+			padding: 15px 30px;
+			width: 80px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.triangulo_lateral{
+			transform: translateX(0);
+		}
+		.triangulo_lateral:before{
+			content: '';
+			transition-duration: 0.3s; 
+			border-style: solid;
+			border-width: 15px 15px 15px 0px;
+			border-color: transparent #a8cf45 transparent transparent;
+			position: absolute;
+			left: 0px;
+			top: 50%;
+			margin-top: -15px;
+		}
+		.triangulo_lateral:hover:before{
+			left: -13px;
+		}
+	</style>
+</head>
+<body>
+	<div class="triangulo_lateral">
+		<p>Triangulo lateral</p>
+	</div>
+		
+</body>
+</html>
